@@ -1,0 +1,339 @@
+body{
+	margin:0;
+	background-color:#D8C266;
+	left:0;
+}
+main{
+	margin-top: 180px;
+}
+
+header{
+	position: absolute;
+	left:0;
+	top: 0;
+	background: #cc2628;
+	width:100%;
+	height:150px;
+	color:white;
+	border-bottom: solid white 20px;
+}
+
+#logo,h1{
+	display:inline-block;
+}
+
+#logo{
+	height: 150px;
+	width:150px;
+	background-image:url(images/logo.png);
+	background-repeat: no-repeat;
+	background-size:contain;
+	margin-left:10px;
+}
+
+#title{
+	position: relative;
+	top:-30px;
+	margin-left: 30px;
+	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 4px;
+	font-size: 60px;
+	transform: translateY(-15px);
+	text-shadow:
+		-4px -4px 0 #000,
+		4px -4px 0 #000,
+		-4px 4px 0 #000,
+		4px 4px 0 #000;
+	white-space: nowrap;
+	z-index: 11;
+}
+
+#siteDesc{
+	font-family: 'Lobster Two', cursive;
+	font-size: 50px;
+	position: absolute;
+	right: 100px;
+	font-style: italic;
+	top:100px;
+}
+
+#fixed_utilities{
+	position: fixed;
+	top:0;
+	right:0;
+	padding:0 10px 0 10px;
+	background: #cc2628;
+	font-family: arial;
+	color: white;
+	z-index:10;
+}
+
+h2{
+	margin-left: 60%;
+	padding:15px;
+	border:solid #55555577;
+	font-family:sans-serif;
+	width:content-width;
+	font-size: 20px;
+	background-color:white;
+	text-align: center;
+}
+
+p{
+	padding:50px 10px;
+	border:solid #55555511;
+	font-family:sans-serif;
+	width:content-width;
+	font-size: 16px;
+	background-color:white;
+	text-indent: 22px;
+}
+
+.quotes{
+	padding-top: 100px;
+	width:80%;
+	margin:40px auto;
+	background: white;
+}
+
+.sub_footer{
+	width:80%;
+	height:400px;
+	margin:auto;
+	background: grey;
+}
+
+footer{
+	background-color: white;
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-family: arial;
+	text-align: center;
+}
+
+.toggleBox{
+	height:150px;
+	width:200px;
+	text-align: center;
+	display: none;
+	color: white;
+	font-family: arial;
+	font-size: 25px;
+	line-height: 150px;
+}
+
+/*Carousel Styles*/
+button{
+	cursor: pointer;
+}
+
+.carousel{
+	position: relative;
+	height:400px;
+	width:900px;
+	margin:auto;
+}
+
+.carouselImage{
+	display: none;
+	width:100%;
+	height:100%;
+}
+
+.carouselTrackContainer{
+	position: relative;
+	height:100%;
+	background: #ccc;
+	overflow: hidden;
+}
+
+.carouselTrack{
+	padding:0;
+	margin:0;
+	list-style:none;
+	position: relative;
+	height:100%;
+	transition: transform 250ms ease-in;
+}
+
+.carouselSlide{
+	position: absolute;
+	top:0;
+	bottom:0;
+	width:100%;
+}
+
+.carouselButtonLeft{
+	position: absolute;
+	left:-20px;
+	top:50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	height:100px;
+	border: 0;
+	background-color: rgba(0,0,50,.2);
+}
+
+.carouselButtonRight{
+	position: absolute;
+	right:-20px;
+	top:50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	height:100px;
+	border: 0;
+	background-color: rgba(0,0,50,.2);
+}
+
+.carouselNav{
+	position: absolute;
+	bottom:-28px;
+	width:100%;
+	padding:5px 0;
+	background: #ff8080;
+	text-align: center;
+}
+
+.carouselIndicator{
+	margin:0 15px;
+	border:0;
+	border-radius: 50%;
+	background:grey;
+	height:10px;
+	width:10px;
+}
+
+.carouselIndicator.currentSlide{
+	background:black;
+}
+/*End carousel*/
+
+#address{
+	border:solid #55555577;
+	width:500px;
+	height:100%;
+	padding-top: 10px;
+	margin-left:40px;
+	background-color: white;
+}
+#mapImage{
+	transform: translateY(4px);
+	width:500px;
+}
+.addressLabel{
+	font-family: sans-serif;
+	margin-left: 5px;
+}
+.addressValue{
+	float:right;
+	margin-right: 5px;
+}
+
+#contactForm{
+	font-family: arial;
+	background: white;
+	padding:12px;
+}
+.contact{
+	margin:13px;
+}
+
+@media only screen and (max-width: 960px){
+	header{
+		height:120px;
+	}
+	#logo{
+		height:120px;
+		width:120px;
+	}
+	#title{
+		position: absolute;
+		top:18px;
+		transform: translateY(-6px);
+		font-size:45px;
+	}
+	#siteDesc{
+		top:70px;
+	}
+	main{
+		position: relative;
+		top:-70px;
+	}
+	main > *{
+		margin:5px 0 5px 0;
+	}
+	.carousel{
+		transform: translateY(60px);
+		height:300px;
+		width:500px;
+	}
+}
+@media only screen and (max-width: 775px){
+	header{
+		height:80px;
+	}
+	#logo{
+		height:800px;
+		width:80px;
+	}
+	#title{
+		transform: translateY(-8px);
+		font-size:25px;
+	}
+	#siteDesc{
+		top:50px;
+		font-size: 30px;
+	}
+	.carousel{
+		transform: translateY(0);
+	}
+
+}
+
+@media only screen and (max-width: 580px){
+	#fixed_utilities{
+		font-size:13px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	footer h3{
+		font-size: 13px;
+	}
+	.carousel{
+		width:400px;
+		height:200px;
+	}
+	.carouselIndicator{
+		padding:0;
+		width:8px;
+		height:9px;
+		margin:0 6px;
+	}
+	#address{
+		width:90%;
+		margin:auto;
+	}
+	#mapImage{
+		width:100%;
+	}
+	.contact{
+		margin:5px;
+	}
+}
+
+@media only screen and (max-width: 350px){
+	#title{
+		transform: translateX(-10px);
+	}
+	#siteDesc{
+		font-size: 21px;
+		transform: translate(30px, 10px);
+	}
+	.carousel{
+		width:270px;
+		height:170px;
+	}
+	
+}
