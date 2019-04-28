@@ -278,8 +278,13 @@ button{
 		width:80px;
 	}
 	#title{
-		transform: translateY(-8px);
+		transform: translate(-25px,-8px);
 		font-size:25px;
+		text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
 	}
 	#siteDesc{
 		top:50px;
