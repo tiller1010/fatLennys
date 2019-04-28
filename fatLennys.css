@@ -191,7 +191,7 @@ button{
 	bottom:-28px;
 	width:100%;
 	padding:5px 0;
-	background: #ff8080;
+	background: #ff8080aa;
 	text-align: center;
 }
 
@@ -307,7 +307,7 @@ button{
 		font-size: 13px;
 	}
 	.carousel{
-		width:400px;
+		width:380px;
 		height:200px;
 	}
 	.carouselIndicator{
