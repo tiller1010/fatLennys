@@ -124,21 +124,26 @@ footer{
 }
 
 /*Carousel Styles*/
+/*Carousel Styles*/
 button{
 	cursor: pointer;
 }
 
+.carousel-container{
+	background-color: #ccc;
+
+}
+
 .carousel{
 	position: relative;
-	height:400px;
-	width:900px;
-	margin:auto;
+	height:450px;
+	border-bottom: 10px solid #bf5353;
 }
 
 .carouselImage{
 	display: none;
 	width:100%;
-	height:100%;
+	height: 100%;
 }
 
 .carouselTrackContainer{
@@ -146,6 +151,7 @@ button{
 	height:100%;
 	background: #ccc;
 	overflow: hidden;
+	/* z-index: 2; */
 }
 
 .carouselTrack{
@@ -164,48 +170,37 @@ button{
 	width:100%;
 }
 
-.carouselButtonLeft{
+.carouselButtons{
 	position: absolute;
-	left:-20px;
-	top:50%;
-	transform: translateY(-50%);
+	bottom: 0;
+	right: 0;
+	width: 40%;
+	height: 55Zpx;
 	z-index: 2;
-	height:100px;
+}
+
+.carouselButtonLeft{
+	width: 40%;
+	height: 100%;
+	margin: 10px;
 	border: 0;
-	background-color: rgba(0,0,50,.2);
+	background-color: #bf5353aa;
 }
 
 .carouselButtonRight{
-	position: absolute;
-	right:-20px;
-	top:50%;
-	transform: translateY(-50%);
-	z-index: 2;
-	height:100px;
+	width: 40%;
+	height: 100%;
+	margin: 10px;
 	border: 0;
-	background-color: rgba(0,0,50,.2);
+	background-color: #bf5353aa;
 }
 
-.carouselNav{
-	position: absolute;
-	bottom:-28px;
-	width:100%;
-	padding:5px 0;
-	background: #ff8080aa;
-	text-align: center;
+.carousel > button{
+	transition: background-color .5s;
 }
 
-.carouselIndicator{
-	margin:0 15px;
-	border:0;
-	border-radius: 50%;
-	background:grey;
-	height:10px;
-	width:10px;
-}
-
-.carouselIndicator.currentSlide{
-	background:black;
+.carousel .carouselButtons > button:hover{
+	background-color: #fff;
 }
 /*End carousel*/
 
@@ -263,11 +258,11 @@ button{
 	main > *{
 		margin:5px 0 5px 0;
 	}
-	.carousel{
+/*	.carousel{
 		transform: translateY(60px);
 		height:300px;
 		width:500px;
-	}
+	}*/
 }
 @media only screen and (max-width: 775px){
 	header{
@@ -290,9 +285,9 @@ button{
 		top:50px;
 		font-size: 30px;
 	}
-	.carousel{
+/*	.carousel{
 		transform: translateY(0);
-	}
+	}*/
 
 }
 
@@ -306,7 +301,7 @@ button{
 	footer h3{
 		font-size: 13px;
 	}
-	.carousel{
+/*	.carousel{
 		width:390px;
 		height:200px;
 	}
@@ -321,7 +316,7 @@ button{
 		width:8px;
 		height:9px;
 		margin:0 6px;
-	}
+	}*/
 	#address{
 		width:90%;
 		margin:auto;
@@ -342,9 +337,9 @@ button{
 		font-size: 21px;
 		transform: translate(30px, 10px);
 	}
-	.carousel{
+/*	.carousel{
 		width:270px;
 		height:170px;
-	}
+	}*/
 	
 }
