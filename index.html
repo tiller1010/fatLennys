@@ -111,33 +111,26 @@
 </div>
 <!--End of carousel-->
 
-	<div class="quotes">
+	<div class="quotes content">
 		<p>Quote 1</p>
 		<p>Quote 2</p>
 		<p>Quote 3</p>
 		<p>Quote 4</p>
 	</div>
 
-	<div class='sub_footer'>
-		<form id="contactForm">
-			Subject:
-			<select class="contact">
-				<option>Option 1</option>
-			</select><br/>
-			First Name: <input class="contact" type="text" name="firstName"><br/>
-			Last Name: <input class="contact" type="text" name="lastName"><br/>
-			Comment:<br/>
-			<textarea class="contact" placeholder="Comment"></textarea>
-			<input type="submit" value="Send">
+	<div class='content'>
+		<form id="contactForm" action="mailto:" method="post" enctype="text/plain">
+			Name: <input class="contact" type="text" name="Name">
+			Comment:
+			<textarea class="contact" name="Message"></textarea>
+			<input type="submit" class="submit" value="Send">
 		</form>
-
-		<h4>123 Madeup Street Erie</h4>
 	</div>
 
 	</main>
 	
 	<footer>
-		<h3>Website Template by Tyler Trout 2018</h3>
+		<h3>Website Template by Tyler Trout 2020</h3>
 	</footer>
 </body>
 </html>

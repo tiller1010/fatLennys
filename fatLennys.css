@@ -73,7 +73,6 @@ h2{
 	padding:15px;
 	border:solid #55555577;
 	font-family:sans-serif;
-	width:content-width;
 	font-size: 20px;
 	background-color:white;
 	text-align: center;
@@ -83,17 +82,18 @@ p{
 	padding:50px 10px;
 	border:solid #55555511;
 	font-family:sans-serif;
-	width:content-width;
 	font-size: 16px;
 	background-color:white;
 	text-indent: 22px;
 }
 
-.quotes{
-	padding-top: 100px;
-	width:80%;
-	margin:40px auto;
-	background: white;
+.content{
+	border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    border: 3px solid #ccc;
 }
 
 .sub_footer{
@@ -175,22 +175,21 @@ button{
 	bottom: 0;
 	right: 0;
 	width: 40%;
-	height: 55Zpx;
 	z-index: 2;
 }
 
 .carouselButtonLeft{
 	width: 40%;
-	height: 100%;
-	margin: 10px;
+	height: 38px;
+	margin: 1px 10px;
 	border: 0;
 	background-color: #bf5353aa;
 }
 
 .carouselButtonRight{
 	width: 40%;
-	height: 100%;
-	margin: 10px;
+	height: 38px;
+	margin: 1px 10px;
 	border: 0;
 	background-color: #bf5353aa;
 }
@@ -201,6 +200,33 @@ button{
 
 .carousel .carouselButtons > button:hover{
 	background-color: #fff;
+}
+
+.carouselNav{
+	transform: translateY(-40px);
+	width:100%;
+	padding: 11px 0;
+	background-color: #cccccccc;
+
+}
+
+.carouselIndicator{
+	margin:0 15px;
+	border:0;
+	border-radius: 50%;
+	background:grey;
+	height:11px;
+	width:11px;
+	padding: 0;
+	transition: background .5s;
+}
+
+.carouselIndicator:hover{
+	background: #fff;
+}
+
+.carouselIndicator.currentSlide{
+	background:black;
 }
 /*End carousel*/
 
@@ -229,9 +255,34 @@ button{
 	font-family: arial;
 	background: white;
 	padding:12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contact{
 	margin:13px;
+	padding: 10px 0;
+	font-family: arial;
+}
+textarea{
+	min-height: 100px;
+}
+.submit{
+	background-color: #D36E57;
+	cursor: pointer;
+	padding: 15px 0;
+	color: #fff;
+	font-size: 1.5em;
+	border: none;
+	transition: background-color .5s;
+}
+.submit:hover{
+	background-color: #cc2628;
+}
+
+
+footer h3{
+	margin: 0;
 }
 
 @media only screen and (max-width: 960px){
@@ -253,20 +304,29 @@ button{
 	}
 	main{
 		position: relative;
-		top:-70px;
+		top:-25px;
 	}
 	main > *{
 		margin:5px 0 5px 0;
 	}
-/*	.carousel{
-		transform: translateY(60px);
-		height:300px;
-		width:500px;
-	}*/
 }
 @media only screen and (max-width: 775px){
+	#siteDesc{
+		top:90px;
+		font-size: 30px;
+	}
+	.carouselButtons{
+		width: unset;
+		min-width: 60px;
+	}
+	.carouselButtonLeft, .carouselButtonRight{
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 580px){
 	header{
-		height:80px;
+		height: 80px;
 	}
 	#logo{
 		height:800px;
@@ -281,19 +341,14 @@ button{
 		-2px 2px 0 #000,
 		2px 2px 0 #000;
 	}
-	#siteDesc{
-		top:50px;
-		font-size: 30px;
-	}
-/*	.carousel{
-		transform: translateY(0);
-	}*/
-
-}
-
-@media only screen and (max-width: 580px){
 	#fixed_utilities{
 		font-size:13px;
+	}
+	#siteDesc{
+		display: none;
+	}
+	main{
+		margin-top: 140px;
 	}
 	h2{
 		font-size: 16px;
@@ -301,22 +356,6 @@ button{
 	footer h3{
 		font-size: 13px;
 	}
-/*	.carousel{
-		width:390px;
-		height:200px;
-	}
-	.carouselButtonLeft{
-		left:0;
-	}
-	.carouselButtonRight{
-		right:0;
-	}
-	.carouselIndicator{
-		padding:0;
-		width:8px;
-		height:9px;
-		margin:0 6px;
-	}*/
 	#address{
 		width:90%;
 		margin:auto;
